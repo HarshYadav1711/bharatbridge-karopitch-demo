@@ -6,6 +6,7 @@ import { HowItWorks } from "@/sections/HowItWorks";
 import { WhoCanApply } from "@/sections/WhoCanApply";
 import { Investors } from "@/sections/Investors";
 import { FeaturedStartups } from "@/sections/FeaturedStartups";
+import { FounderStory } from "@/sections/FounderStory";
 import { AboutKaroStartup } from "@/sections/AboutKaroStartup";
 import { CTA } from "@/sections/CTA";
 
@@ -26,6 +27,7 @@ export default function Home() {
         <WhoCanApply />
         <Investors />
         <FeaturedStartups />
+        <FounderStory />
         <AboutKaroStartup />
         <CTA />
       </main>

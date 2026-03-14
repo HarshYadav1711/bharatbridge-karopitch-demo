@@ -8,10 +8,21 @@ const inter = Inter({
   display: "swap",
 });
 
+const baseUrl =
+  process.env.NEXT_PUBLIC_APP_URL ??
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+
 export const metadata: Metadata = {
-  title: "Karo Pitch | Startup Pitching by KaroStartup",
+  metadataBase: new URL(baseUrl),
+  title: "BharatBridge – Pitch Your Startup to Investors",
   description:
-    "Founders pitch startups to investors. Built for founders from tier 2 and tier 3 cities. Investors discover promising startups. KaroStartup supports the ecosystem.",
+    "A demo landing page illustrating the Karo Pitch platform, where founders connect with investors and mentors.",
+  openGraph: {
+    title: "BharatBridge – Pitch Your Startup to Investors",
+    description:
+      "A demo landing page illustrating the Karo Pitch platform, where founders connect with investors and mentors.",
+    siteName: "BharatBridge",
+  },
 };
 
 export const viewport: Viewport = {

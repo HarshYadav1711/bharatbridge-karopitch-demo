@@ -8,12 +8,13 @@ const inter = Inter({
   display: "swap",
 });
 
-const baseUrl =
+/** Resolved origin for OG/Twitter image URLs. */
+const metadataBaseUrl =
   process.env.NEXT_PUBLIC_APP_URL ??
   (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
 
 export const metadata: Metadata = {
-  metadataBase: new URL(baseUrl),
+  metadataBase: new URL(metadataBaseUrl),
   title: "BharatBridge – Pitch Your Startup to Investors",
   description:
     "A demo landing page illustrating the Karo Pitch platform, where founders connect with investors and mentors.",

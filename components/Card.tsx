@@ -6,6 +6,7 @@ interface CardProps {
   as?: "div" | "article" | "section";
 }
 
+/** Bordered card container; optional semantic element via `as`. */
 export function Card({
   children,
   className,
@@ -28,6 +29,7 @@ interface CardHeaderProps {
   className?: string;
 }
 
+/** Card header block with bottom padding removed for content. */
 export function CardHeader({ children, className }: CardHeaderProps) {
   return (
     <div className={cn("flex flex-col gap-1.5 p-6 pb-0", className)}>
@@ -41,6 +43,7 @@ interface CardContentProps {
   className?: string;
 }
 
+/** Card body with standard padding. */
 export function CardContent({ children, className }: CardContentProps) {
   return <div className={cn("p-6 pt-4", className)}>{children}</div>;
 }

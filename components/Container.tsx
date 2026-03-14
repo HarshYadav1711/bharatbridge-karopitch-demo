@@ -6,6 +6,7 @@ interface ContainerProps {
   as?: "div" | "section" | "main";
 }
 
+/** Max-width wrapper with horizontal padding; optional semantic element via `as`. */
 export function Container({
   children,
   className,

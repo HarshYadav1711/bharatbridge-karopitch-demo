@@ -3,9 +3,11 @@ import { Container } from "@/components/Container";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { cn } from "@/lib/utils";
 
-const buttonBase =
+/** Shared base styles for hero CTA links (not the Button component). */
+const heroLinkBase =
   "inline-flex items-center justify-center rounded-lg font-medium h-10 px-6 text-base transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50";
 
+/** Hero section: headline, tagline, Apply and Explore Startups links. */
 export function Hero() {
   return (
     <AnimatedSection
@@ -29,7 +31,7 @@ export function Hero() {
             <Link
               href="#apply"
               className={cn(
-                buttonBase,
+                heroLinkBase,
                 "bg-accent-brand text-white hover:opacity-90 focus-visible:ring-2 focus-visible:ring-accent-brand/50 focus-visible:ring-offset-2"
               )}
             >
@@ -38,7 +40,7 @@ export function Hero() {
             <Link
               href="#startups"
               className={cn(
-                buttonBase,
+                heroLinkBase,
                 "border border-border bg-transparent text-foreground hover:bg-muted focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               )}
             >

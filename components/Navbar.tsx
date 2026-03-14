@@ -12,7 +12,8 @@ export interface NavLink {
   href: string;
 }
 
-const defaultLinks: NavLink[] = [
+/** Default nav items when none are passed. */
+const defaultNavLinks: NavLink[] = [
   { label: "For Founders", href: "#" },
   { label: "For Investors", href: "#" },
   { label: "About", href: "#" },
@@ -24,8 +25,9 @@ interface NavbarProps {
   applyLabel?: string;
 }
 
+/** Sticky header with desktop nav, mobile menu, and optional Apply CTA. */
 export function Navbar({
-  links = defaultLinks,
+  links = defaultNavLinks,
   applyHref = "#apply",
   applyLabel = "Apply",
 }: NavbarProps) {

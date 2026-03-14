@@ -10,7 +10,8 @@ import { SectionTitle } from "@/components/SectionTitle";
 import { Card, CardContent } from "@/components/Card";
 import { AnimatedSection } from "@/components/AnimatedSection";
 
-const steps = [
+/** Four steps: Apply → Get Shortlisted → Pitch → Raise Funding. */
+const howItWorksSteps = [
   {
     step: 1,
     title: "Apply",
@@ -40,6 +41,7 @@ const steps = [
   },
 ] as const;
 
+/** How It Works: four-step flow from apply to funding. */
 export function HowItWorks() {
   return (
     <AnimatedSection id="how-it-works" className="py-16 sm:py-20 bg-muted/30">
@@ -50,7 +52,7 @@ export function HowItWorks() {
           align="center"
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {steps.map(({ step, title, description, icon: Icon }, index) => (
+          {howItWorksSteps.map(({ step, title, description, icon: Icon }, index) => (
             <div key={step} className="relative flex flex-col">
               <Card className="flex h-full flex-col">
                 <CardContent className="flex flex-1 flex-col gap-4 p-6">
@@ -73,7 +75,8 @@ export function HowItWorks() {
                   </p>
                 </CardContent>
               </Card>
-              {index < steps.length - 1 && (
+              {/* Connector arrow between step cards (desktop only). */}
+              {index < howItWorksSteps.length - 1 && (
                 <div
                   className="absolute -right-3 top-1/2 z-10 hidden -translate-y-1/2 text-border lg:block"
                   aria-hidden

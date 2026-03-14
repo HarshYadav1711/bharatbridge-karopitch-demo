@@ -4,7 +4,8 @@ import { SectionTitle } from "@/components/SectionTitle";
 import { Card, CardContent } from "@/components/Card";
 import { AnimatedSection } from "@/components/AnimatedSection";
 
-const pillars = [
+/** KaroStartup value pillars (media, ecosystem, supporting founders). */
+const karostartupPillars = [
   {
     icon: Megaphone,
     title: "Startup media",
@@ -25,6 +26,7 @@ const pillars = [
   },
 ] as const;
 
+/** About KaroStartup: intro copy and three value pillars. */
 export function AboutKaroStartup() {
   return (
     <AnimatedSection id="about-karostartup" className="py-16 sm:py-20 bg-muted/30">
@@ -45,7 +47,7 @@ export function AboutKaroStartup() {
           </CardContent>
         </Card>
         <ul className="grid gap-4 sm:grid-cols-3">
-          {pillars.map(({ icon: Icon, title, description }) => (
+          {karostartupPillars.map(({ icon: Icon, title, description }) => (
             <li key={title}>
               <Card className="h-full">
                 <CardContent className="flex flex-col gap-3 p-5">

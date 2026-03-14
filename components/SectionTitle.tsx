@@ -7,6 +7,7 @@ interface SectionTitleProps {
   className?: string;
 }
 
+/** Section heading (h2) with optional subtitle and alignment. */
 export function SectionTitle({
   title,
   subtitle,

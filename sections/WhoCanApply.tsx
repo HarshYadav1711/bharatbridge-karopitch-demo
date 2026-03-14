@@ -11,7 +11,8 @@ import { SectionTitle } from "@/components/SectionTitle";
 import { Card, CardContent } from "@/components/Card";
 import { AnimatedSection } from "@/components/AnimatedSection";
 
-const categories = [
+/** Startup categories shown as eligible for Karo Pitch. */
+const eligibleCategories = [
   { name: "D2C", icon: ShoppingBag },
   { name: "MSMEs", icon: Factory },
   { name: "SaaS", icon: Cpu },
@@ -20,6 +21,7 @@ const categories = [
   { name: "Bharat-focused startups", icon: MapPin },
 ] as const;
 
+/** Who Can Apply: grid of eligible startup categories. */
 export function WhoCanApply() {
   return (
     <AnimatedSection id="apply" className="py-16 sm:py-20">
@@ -30,7 +32,7 @@ export function WhoCanApply() {
           align="center"
         />
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {categories.map(({ name, icon: Icon }) => (
+          {eligibleCategories.map(({ name, icon: Icon }) => (
             <li key={name}>
               <Card className="h-full">
                 <CardContent className="flex items-center gap-4 p-5">

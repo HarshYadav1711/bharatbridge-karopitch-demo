@@ -31,8 +31,10 @@ const sizeStyles: Record<ButtonSize, string> = {
   lg: "h-10 px-6 text-base",
 };
 
+/** Motion config for primary/accent hover scale; respects prefers-reduced-motion. */
 const scaleTransition = { duration: 0.2, ease: [0.25, 0.1, 0.25, 1] as const };
 
+/** Primary, accent, outline, ghost button; primary/accent get subtle scale on hover when motion allowed. */
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
@@ -67,7 +69,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     if (reduceMotion || !isPrimaryOrAccent) {
       return button;
     }
-
+    // Wrap in motion.span for hover/tap scale; ref stays on inner button.
     return (
       <motion.span
         className="inline-block"

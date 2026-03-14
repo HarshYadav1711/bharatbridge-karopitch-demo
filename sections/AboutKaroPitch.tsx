@@ -3,6 +3,7 @@ import { SectionTitle } from "@/components/SectionTitle";
 import { Card, CardContent } from "@/components/Card";
 import { AnimatedSection } from "@/components/AnimatedSection";
 
+/** About Karo Pitch: what it is, who it’s for, and how investors use it. */
 export function AboutKaroPitch() {
   return (
     <AnimatedSection id="about" className="py-16 sm:py-20">

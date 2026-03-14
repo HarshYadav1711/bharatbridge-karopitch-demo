@@ -2,7 +2,8 @@ import Link from "next/link";
 import { Container } from "@/components/Container";
 import { Twitter, Linkedin, Youtube, Mail } from "lucide-react";
 
-const footerLinks = {
+/** Link groups for Karo Pitch, KaroStartup, contact, and social. */
+const footerLinkGroups = {
   karopitch: [
     { label: "Apply", href: "#apply" },
     { label: "How It Works", href: "#how-it-works" },
@@ -20,6 +21,7 @@ const socialPlaceholders = [
   { label: "YouTube", href: "#", icon: Youtube },
 ] as const;
 
+/** Site footer: link groups, contact email, social placeholders, copyright. */
 export function Footer() {
   return (
     <footer
@@ -36,7 +38,7 @@ export function Footer() {
                 Karo Pitch
               </h3>
               <ul className="mt-3 space-y-2">
-                {footerLinks.karopitch.map(({ label, href }) => (
+                {footerLinkGroups.karopitch.map(({ label, href }) => (
                   <li key={href}>
                     <Link
                       href={href}
@@ -55,7 +57,7 @@ export function Footer() {
                 KaroStartup
               </h3>
               <ul className="mt-3 space-y-2">
-                {footerLinks.karostartup.map(({ label, href }) => (
+                {footerLinkGroups.karostartup.map(({ label, href }) => (
                   <li key={href}>
                     <Link
                       href={href}

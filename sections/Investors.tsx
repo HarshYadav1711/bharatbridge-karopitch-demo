@@ -17,7 +17,8 @@ const placeholderInvestors: { name: string; type: InvestorType }[] = [
   { name: "Investor Six", type: "Angel" },
 ];
 
-const typeConfig: Record<
+/** Per investor type: icon, label, and badge styling. */
+const investorTypeConfig: Record<
   InvestorType,
   { icon: typeof Users; label: string; className: string }
 > = {
@@ -38,6 +39,7 @@ const typeConfig: Record<
   },
 };
 
+/** Investors section: grid of placeholder investor cards with type badges. */
 export function Investors() {
   return (
     <AnimatedSection id="investors" className="py-16 sm:py-20 bg-muted/30">
@@ -49,8 +51,8 @@ export function Investors() {
         />
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {placeholderInvestors.map(({ name, type }) => {
-            const config = typeConfig[type];
-            const Icon = config.icon;
+            const typeStyle = investorTypeConfig[type];
+            const Icon = typeStyle.icon;
             return (
               <li key={`${name}-${type}`}>
                 <AnimatedCard className="h-full">
@@ -62,11 +64,11 @@ export function Investors() {
                       <span
                         className={cn(
                           "inline-flex items-center gap-1.5 rounded-md border px-2 py-0.5 text-xs font-medium shrink-0",
-                          config.className
+                          typeStyle.className
                         )}
                       >
                         <Icon className="h-3.5 w-3.5" aria-hidden />
-                        {config.label}
+                        {typeStyle.label}
                       </span>
                     </div>
                   </CardContent>

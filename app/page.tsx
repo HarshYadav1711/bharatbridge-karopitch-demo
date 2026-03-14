@@ -10,6 +10,7 @@ import { FounderStory } from "@/sections/FounderStory";
 import { AboutKaroStartup } from "@/sections/AboutKaroStartup";
 import { CTA } from "@/sections/CTA";
 
+/** Landing page: hero, pitch info, how it works, CTA, and footer. */
 export default function Home() {
   return (
     <>

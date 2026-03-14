@@ -4,7 +4,8 @@ import { CardContent } from "@/components/Card";
 import { AnimatedCard } from "@/components/AnimatedCard";
 import { AnimatedSection } from "@/components/AnimatedSection";
 
-const placeholderStartups: {
+/** Placeholder startup entries for the featured grid. */
+const featuredStartupsList: {
   name: string;
   category: string;
   description: string;
@@ -47,6 +48,7 @@ const placeholderStartups: {
   },
 ];
 
+/** Featured Startups: grid of placeholder startup cards (name, category, description). */
 export function FeaturedStartups() {
   return (
     <AnimatedSection id="startups" className="py-16 sm:py-20">
@@ -57,7 +59,7 @@ export function FeaturedStartups() {
           align="center"
         />
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {placeholderStartups.map(({ name, category, description }) => (
+          {featuredStartupsList.map(({ name, category, description }) => (
             <li key={name}>
               <AnimatedCard className="h-full">
                 <CardContent className="flex flex-col gap-3 p-5">

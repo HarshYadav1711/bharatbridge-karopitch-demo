@@ -41,11 +41,7 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section
-      id="how-it-works"
-      className="py-16 sm:py-20 bg-muted/30"
-      aria-labelledby="how-heading"
-    >
+    <section id="how-it-works" className="py-16 sm:py-20 bg-muted/30">
       <Container className="flex flex-col gap-12 sm:gap-16">
         <SectionTitle
           title="How It Works"

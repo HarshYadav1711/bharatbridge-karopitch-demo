@@ -4,11 +4,7 @@ import { Card, CardContent } from "@/components/Card";
 
 export function AboutKaroPitch() {
   return (
-    <section
-      id="about"
-      className="py-16 sm:py-20"
-      aria-labelledby="about-heading"
-    >
+    <section id="about" className="py-16 sm:py-20">
       <Container className="flex flex-col gap-10">
         <SectionTitle
           title="About Karo Pitch"

@@ -1,12 +1,15 @@
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
+/* stylelint-disable at-rule-no-unknown -- Tailwind/PostCSS directives */
+@import "../node_modules/tw-animate-css/dist/tw-animate.css";
+@import "../node_modules/shadcn/dist/tailwind.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer utilities {
   .text-balance {
-    text-wrap: balance;
+    @supports (text-wrap: balance) {
+      text-wrap: balance;
+    }
   }
 }
 

@@ -49,7 +49,7 @@ export function Navbar({
           <div className="hidden md:flex md:items-center md:gap-8">
             {links.map((link) => (
               <Link
-                key={link.href}
+                key={link.label}
                 href={link.href}
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200"
               >
@@ -67,7 +67,7 @@ export function Navbar({
           <button
             type="button"
             className="md:hidden inline-flex items-center justify-center p-2 rounded-lg text-foreground hover:bg-muted focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none transition-colors duration-200"
-            aria-expanded={mobileOpen ? "true" : "false"}
+            {...(mobileOpen ? { "aria-expanded": "true" } : { "aria-expanded": "false" })}
             aria-controls="mobile-nav"
             onClick={() => setMobileOpen((prev) => !prev)}
           >
@@ -89,12 +89,12 @@ export function Navbar({
             "md:hidden overflow-hidden transition-[max-height] duration-200 ease-in-out",
             mobileOpen ? "max-h-80" : "max-h-0"
           )}
-          aria-hidden={!mobileOpen ? "true" : "false"}
+          {...(!mobileOpen ? { "aria-hidden": "true" } : { "aria-hidden": "false" })}
         >
           <div className="flex flex-col gap-1 py-4 border-t border-border">
             {links.map((link) => (
               <Link
-                key={link.href}
+                key={link.label}
                 href={link.href}
                 className="px-2 py-2.5 text-sm font-medium text-foreground hover:bg-muted rounded-lg transition-colors duration-200"
                 onClick={() => setMobileOpen(false)}

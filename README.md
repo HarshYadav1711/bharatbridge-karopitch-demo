@@ -114,6 +114,19 @@ The app is a standard Next.js static/SSR build. You can deploy it anywhere that 
 
 ---
 
+## Security
+
+`npm audit` may report high-severity issues in transitive dependencies (e.g. **glob** via `eslint-config-next`, and **next** itself). Fixing them with `npm audit fix --force` would upgrade to Next.js 16 and eslint-config-next 16, which are breaking changes and require a planned migration.
+
+This project uses Next.js 14. To reduce risk in the meantime:
+
+- Do not expose the Next.js Image Optimizer to untrusted `remotePatterns` (see [GHSA-9g9p-9gw9-jx7f](https://github.com/advisories/GHSA-9g9p-9gw9-jx7f)).
+- Avoid passing untrusted input into React Server Components request handling (see [GHSA-h25m-26qc-wcjf](https://github.com/advisories/GHSA-h25m-26qc-wcjf)).
+
+When ready to address the advisories, upgrade to Next 16 (and related tooling), run tests, and then run `npm audit fix` as needed.
+
+---
+
 ## License
 
 Private. All rights reserved.

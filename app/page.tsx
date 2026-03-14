@@ -4,6 +4,9 @@ import { Hero } from "@/sections/Hero";
 import { AboutKaroPitch } from "@/sections/AboutKaroPitch";
 import { HowItWorks } from "@/sections/HowItWorks";
 import { WhoCanApply } from "@/sections/WhoCanApply";
+import { Investors } from "@/sections/Investors";
+import { FeaturedStartups } from "@/sections/FeaturedStartups";
+import { AboutKaroStartup } from "@/sections/AboutKaroStartup";
 
 export default function Home() {
   return (
@@ -14,6 +17,9 @@ export default function Home() {
         <AboutKaroPitch />
         <HowItWorks />
         <WhoCanApply />
+        <Investors />
+        <FeaturedStartups />
+        <AboutKaroStartup />
       </main>
       <Footer />
     </>

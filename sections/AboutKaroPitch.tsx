@@ -1,10 +1,11 @@
 import { Container } from "@/components/Container";
 import { SectionTitle } from "@/components/SectionTitle";
 import { Card, CardContent } from "@/components/Card";
+import { AnimatedSection } from "@/components/AnimatedSection";
 
 export function AboutKaroPitch() {
   return (
-    <section id="about" className="py-16 sm:py-20">
+    <AnimatedSection id="about" className="py-16 sm:py-20">
       <Container className="flex flex-col gap-10">
         <SectionTitle
           title="About Karo Pitch"
@@ -31,6 +32,6 @@ export function AboutKaroPitch() {
           </CardContent>
         </Card>
       </Container>
-    </section>
+    </AnimatedSection>
   );
 }

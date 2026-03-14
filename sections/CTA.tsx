@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/Container";
+import { AnimatedSection } from "@/components/AnimatedSection";
 import { cn } from "@/lib/utils";
 
 const buttonBase =
@@ -7,7 +8,7 @@ const buttonBase =
 
 export function CTA() {
   return (
-    <section
+    <AnimatedSection
       id="cta"
       className="py-16 sm:py-20 lg:py-24 bg-primary-brand"
       aria-labelledby="cta-heading"
@@ -42,6 +43,6 @@ export function CTA() {
           </div>
         </div>
       </Container>
-    </section>
+    </AnimatedSection>
   );
 }

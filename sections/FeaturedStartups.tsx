@@ -1,6 +1,8 @@
 import { Container } from "@/components/Container";
 import { SectionTitle } from "@/components/SectionTitle";
-import { Card, CardContent } from "@/components/Card";
+import { CardContent } from "@/components/Card";
+import { AnimatedCard } from "@/components/AnimatedCard";
+import { AnimatedSection } from "@/components/AnimatedSection";
 
 const placeholderStartups: {
   name: string;
@@ -47,7 +49,7 @@ const placeholderStartups: {
 
 export function FeaturedStartups() {
   return (
-    <section id="startups" className="py-16 sm:py-20">
+    <AnimatedSection id="startups" className="py-16 sm:py-20">
       <Container className="flex flex-col gap-10">
         <SectionTitle
           title="Featured Startups"
@@ -57,7 +59,7 @@ export function FeaturedStartups() {
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {placeholderStartups.map(({ name, category, description }) => (
             <li key={name}>
-              <Card className="h-full">
+              <AnimatedCard className="h-full">
                 <CardContent className="flex flex-col gap-3 p-5">
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="font-semibold text-foreground">{name}</span>
@@ -69,11 +71,11 @@ export function FeaturedStartups() {
                     {description}
                   </p>
                 </CardContent>
-              </Card>
+              </AnimatedCard>
             </li>
           ))}
         </ul>
       </Container>
-    </section>
+    </AnimatedSection>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { forwardRef } from "react";
+import { motion, useReducedMotion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 export type ButtonVariant = "primary" | "accent" | "outline" | "ghost";
@@ -30,6 +31,8 @@ const sizeStyles: Record<ButtonSize, string> = {
   lg: "h-10 px-6 text-base",
 };
 
+const scaleTransition = { duration: 0.2, ease: [0.25, 0.1, 0.25, 1] as const };
+
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
@@ -42,7 +45,10 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref
   ) => {
-    return (
+    const reduceMotion = useReducedMotion();
+    const isPrimaryOrAccent = variant === "primary" || variant === "accent";
+
+    const button = (
       <button
         ref={ref}
         type={type}
@@ -56,6 +62,21 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       >
         {children}
       </button>
+    );
+
+    if (reduceMotion || !isPrimaryOrAccent) {
+      return button;
+    }
+
+    return (
+      <motion.span
+        className="inline-block"
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.98 }}
+        transition={scaleTransition}
+      >
+        {button}
+      </motion.span>
     );
   }
 );

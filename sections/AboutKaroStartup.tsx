@@ -2,6 +2,7 @@ import { Megaphone, Users, Heart } from "lucide-react";
 import { Container } from "@/components/Container";
 import { SectionTitle } from "@/components/SectionTitle";
 import { Card, CardContent } from "@/components/Card";
+import { AnimatedSection } from "@/components/AnimatedSection";
 
 const pillars = [
   {
@@ -26,7 +27,7 @@ const pillars = [
 
 export function AboutKaroStartup() {
   return (
-    <section id="about-karostartup" className="py-16 sm:py-20 bg-muted/30">
+    <AnimatedSection id="about-karostartup" className="py-16 sm:py-20 bg-muted/30">
       <Container className="flex flex-col gap-10">
         <SectionTitle
           title="About KaroStartup"
@@ -64,6 +65,6 @@ export function AboutKaroStartup() {
           ))}
         </ul>
       </Container>
-    </section>
+    </AnimatedSection>
   );
 }

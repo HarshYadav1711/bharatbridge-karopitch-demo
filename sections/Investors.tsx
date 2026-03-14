@@ -1,7 +1,9 @@
 import { Users, Building2, Network } from "lucide-react";
 import { Container } from "@/components/Container";
 import { SectionTitle } from "@/components/SectionTitle";
-import { Card, CardContent } from "@/components/Card";
+import { CardContent } from "@/components/Card";
+import { AnimatedCard } from "@/components/AnimatedCard";
+import { AnimatedSection } from "@/components/AnimatedSection";
 import { cn } from "@/lib/utils";
 
 type InvestorType = "Angel" | "VC" | "Network";
@@ -38,7 +40,7 @@ const typeConfig: Record<
 
 export function Investors() {
   return (
-    <section id="investors" className="py-16 sm:py-20 bg-muted/30">
+    <AnimatedSection id="investors" className="py-16 sm:py-20 bg-muted/30">
       <Container className="flex flex-col gap-10">
         <SectionTitle
           title="Investors on the Platform"
@@ -51,7 +53,7 @@ export function Investors() {
             const Icon = config.icon;
             return (
               <li key={`${name}-${type}`}>
-                <Card className="h-full">
+                <AnimatedCard className="h-full">
                   <CardContent className="flex flex-col gap-3 p-5">
                     <div className="flex items-start justify-between gap-3">
                       <span className="font-semibold text-foreground">
@@ -68,12 +70,12 @@ export function Investors() {
                       </span>
                     </div>
                   </CardContent>
-                </Card>
+                </AnimatedCard>
               </li>
             );
           })}
         </ul>
       </Container>
-    </section>
+    </AnimatedSection>
   );
 }

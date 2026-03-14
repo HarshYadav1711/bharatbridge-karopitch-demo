@@ -9,6 +9,7 @@ import {
 import { Container } from "@/components/Container";
 import { SectionTitle } from "@/components/SectionTitle";
 import { Card, CardContent } from "@/components/Card";
+import { AnimatedSection } from "@/components/AnimatedSection";
 
 const categories = [
   { name: "D2C", icon: ShoppingBag },
@@ -21,7 +22,7 @@ const categories = [
 
 export function WhoCanApply() {
   return (
-    <section id="apply" className="py-16 sm:py-20">
+    <AnimatedSection id="apply" className="py-16 sm:py-20">
       <Container className="flex flex-col gap-10">
         <SectionTitle
           title="Who Can Apply"
@@ -46,6 +47,6 @@ export function WhoCanApply() {
           ))}
         </ul>
       </Container>
-    </section>
+    </AnimatedSection>
   );
 }

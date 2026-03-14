@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/Container";
+import { AnimatedSection } from "@/components/AnimatedSection";
 import { cn } from "@/lib/utils";
 
 const buttonBase =
@@ -7,7 +8,7 @@ const buttonBase =
 
 export function Hero() {
   return (
-    <section
+    <AnimatedSection
       id="hero"
       className="relative py-16 sm:py-24 lg:py-32"
       aria-labelledby="hero-heading"
@@ -46,6 +47,6 @@ export function Hero() {
           </div>
         </div>
       </Container>
-    </section>
+    </AnimatedSection>
   );
 }

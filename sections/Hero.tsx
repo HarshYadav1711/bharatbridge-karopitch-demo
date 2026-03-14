@@ -3,7 +3,7 @@ import { Container } from "@/components/Container";
 import { cn } from "@/lib/utils";
 
 const buttonBase =
-  "inline-flex items-center justify-center rounded-lg font-medium transition-opacity focus-visible:outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-6 text-base";
+  "inline-flex items-center justify-center rounded-lg font-medium h-10 px-6 text-base transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50";
 
 export function Hero() {
   return (
@@ -29,7 +29,7 @@ export function Hero() {
               href="#apply"
               className={cn(
                 buttonBase,
-                "bg-accent-brand text-white hover:opacity-90 focus-visible:ring-accent-brand/50"
+                "bg-accent-brand text-white hover:opacity-90 focus-visible:ring-2 focus-visible:ring-accent-brand/50 focus-visible:ring-offset-2"
               )}
             >
               Apply to Pitch
@@ -38,7 +38,7 @@ export function Hero() {
               href="#startups"
               className={cn(
                 buttonBase,
-                "border border-border bg-transparent text-foreground hover:bg-muted focus-visible:ring-ring"
+                "border border-border bg-transparent text-foreground hover:bg-muted focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               )}
             >
               Explore Startups

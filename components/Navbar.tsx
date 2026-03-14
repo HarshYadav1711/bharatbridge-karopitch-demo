@@ -40,7 +40,7 @@ export function Navbar({
         >
           <Link
             href="/"
-            className="text-lg font-semibold text-foreground hover:opacity-80 transition-opacity shrink-0"
+            className="text-lg font-semibold text-foreground hover:opacity-80 transition-opacity duration-200 shrink-0"
           >
             BharatBridge
           </Link>
@@ -51,7 +51,7 @@ export function Navbar({
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200"
               >
                 {link.label}
               </Link>
@@ -66,7 +66,7 @@ export function Navbar({
           {/* Mobile menu button */}
           <button
             type="button"
-            className="md:hidden inline-flex items-center justify-center p-2 rounded-lg text-foreground hover:bg-muted focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
+            className="md:hidden inline-flex items-center justify-center p-2 rounded-lg text-foreground hover:bg-muted focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none transition-colors duration-200"
             aria-expanded={mobileOpen ? "true" : "false"}
             aria-controls="mobile-nav"
             onClick={() => setMobileOpen((prev) => !prev)}
@@ -96,7 +96,7 @@ export function Navbar({
               <Link
                 key={link.href}
                 href={link.href}
-                className="px-2 py-2.5 text-sm font-medium text-foreground hover:bg-muted rounded-lg transition-colors"
+                className="px-2 py-2.5 text-sm font-medium text-foreground hover:bg-muted rounded-lg transition-colors duration-200"
                 onClick={() => setMobileOpen(false)}
               >
                 {link.label}

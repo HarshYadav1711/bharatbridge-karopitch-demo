@@ -47,6 +47,45 @@ Everything in the stack is free to use and current; there are no paid APIs or de
 
 ---
 
+## Performance & Accessibility
+
+The landing page was built with performance and accessibility as requirements from the start.
+
+**Performance**
+
+- **Next.js App Router** – Server Components by default, static generation for the homepage, and optimized client boundaries so only interactive parts hydrate.
+- **Tailwind CSS** – Utility-first CSS with purging; only used classes are shipped. No unused styles or heavy CSS frameworks.
+- **Fonts** – `next/font` (Inter) with `display: swap` to avoid layout shift and invisible text during load.
+
+**Accessibility**
+
+- **Semantic HTML** – One `<h1>`, section headings as `<h2>`, `<main>`, `<nav>`, `<footer>`, and landmarks so screen readers can navigate by structure.
+- **Focus states** – Visible focus rings on all interactive elements (links, buttons, nav) via `focus-visible`; keyboard users get clear feedback.
+- **Reduced motion** – `scroll-behavior: smooth` is disabled when `prefers-reduced-motion: reduce` is set.
+- **Responsive layout** – Breakpoints and touch targets are sized for small screens; nav collapses to a menu on narrow viewports.
+
+**Lighthouse metrics (placeholders)**
+
+Screenshots from a production build can be added below.
+
+**Performance**
+
+<!-- Add Lighthouse Performance screenshot here -->
+
+**Accessibility**
+
+<!-- Add Lighthouse Accessibility screenshot here -->
+
+**Best Practices**
+
+<!-- Add Lighthouse Best Practices screenshot here -->
+
+**SEO**
+
+<!-- Add Lighthouse SEO screenshot here -->
+
+---
+
 ## Responsible use of AI tools
 
 This project was built with help from AI-assisted coding (Cursor). AI was used to:

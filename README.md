@@ -21,6 +21,20 @@ Karo Pitch connects early-stage founders with investors and mentors, with a focu
 
 ---
 
+## Product Thinking
+
+The homepage is built around two primary actions: **founders applying to pitch** and **investors exploring startups**. The section order and content support both paths without crowding the page.
+
+- **Hero:** The headline and primary CTA focus on the pitch opportunity (“Pitch Your Startup to Real Investors”, “Apply to Pitch”). Founders are the main supply side for the program; the Hero answers “what’s in it for me?” quickly and pushes them toward the apply flow. The secondary CTA (“Explore Startups”) is there for investors and curious visitors so both segments see a relevant next step.
+
+- **How It Works (four steps):** The process is broken into four steps (Apply → Get Shortlisted → Pitch to Investors → Raise Funding) so that founders can scan the journey in one pass. Four is enough to be concrete without feeling long. It sets expectations and reduces uncertainty about what happens after they apply.
+
+- **Credibility before final CTA:** Investors and Featured Startups sit above the bottom CTA. Visitors who need proof before acting see real (or placeholder) participants and example startups before they’re asked to apply or partner. That order—explain, show proof, then ask—reduces hesitation and supports conversion.
+
+- **Repeated CTA near the bottom:** A second CTA (“Ready to Pitch Your Startup?” with Apply Now / Partner With Us) appears after the credibility sections. Many users only decide after reading the full page; a single CTA at the top would miss them. Repeating the ask at the end gives a clear next step without requiring a scroll back up.
+
+---
+
 ## Technology stack
 
 - **Next.js 14** (App Router) – routing, layout, and static generation

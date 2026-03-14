@@ -1,6 +1,12 @@
 # BharatBridge – Karo Pitch Demo
 
-A single-page marketing site for **Karo Pitch**, the startup pitching program run by KaroStartup. The landing page explains the platform, how it works, who can apply, and who’s behind it. It’s built to feel credible and founder-friendly, with a clear path from “what is this?” to “apply” or “partner with us.”
+*BharatBridge is a YC-style demo landing page built to illustrate the Karo Pitch platform.*
+
+---
+
+## Project Overview
+
+Karo Pitch is a startup pitching program run by KaroStartup: founders apply to pitch live to investors and mentors, with a focus on early-stage companies from tier 2 and tier 3 cities. This repo is a demo landing page that shows how such a product can be presented—value proposition, process, credibility, and clear CTAs for both founders and investors. It was built as a reference implementation for a production-grade marketing site (Next.js, TypeScript, Tailwind, accessibility) that can be reused or extended for the real Karo Pitch launch.
 
 ---
 
